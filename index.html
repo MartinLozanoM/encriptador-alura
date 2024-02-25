@@ -3,8 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Encriptador Alura</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <!-- Encriptador de mensaje -->
+      <div class="contenedor-encriptador">
+        <div class="logo"><img src="./img/Logo.svg" alt="Logo" /></div>
+        <!-- Aqui se ingresa el mensaje que se quiere encriptar -->
+        <div class="texto">
+          <textarea
+            name="ingresar-texto"
+            id="encriptador"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese el texto aqui"
+          ></textarea>
+        </div>
+        <!-- Botones de encriptar y desencriptar -->
+        <div class="contenedor-botones">
+          <div class="advertencia">
+            <img
+              src="./img/icono-exclamacion.png"
+              alt="icono exclamacion"
+              width="16"
+              height="16"
+            />
+            <p>Solo letras minúsculas y sin acentos</p>
+          </div>
+          <div class="botones-encriptador">
+            <!-- Con este boton de encripta el mensaje -->
+            <button class="boton-encriptar">Encriptar</button>
+            <!-- Con este boton desencriptamos el mensaje -->
+            <button class="boton-desencriptar">Desencriptar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Resultado encriptado -->
+      <div class="contenedor-resultado">
+        <!-- Aqui se muestra la pantalla cuando no hay mensaje encriptado -->
+        <div class="contenedor-sin-resultado">
+          <img src="./img/Muñeco.png" alt="Muñeco" />
+          <div class="ningun-mensaje">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+        </div>
+        <!-- Aqui se muestra el mensaje encriptado -->
+        <div class="contenedor-con-resultado">
+          <div class="resultado-mensaje">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio deleniti modi quod ipsam ad ipsa, possimus beatae
+              officia sequi vel doloremque, autem est porro eveniet odit, fuga
+              voluptas enim. Excepturi!
+            </p>
+          </div>
+          <!-- Con este boton copiamos el mensaje del resultado -->
+          <button class="boton-copiar">Copiar</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
