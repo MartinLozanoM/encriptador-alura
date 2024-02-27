@@ -69,12 +69,14 @@ main {
   margin-bottom: 20px;
   background-color: #0a3871;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .boton-desencriptar {
   border: 1px solid #0a3871;
   color: #0a3871;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 /*? Seccion resultado */
@@ -128,6 +130,7 @@ main {
   color: #0a3871;
   background-color: #ffffff;
   width: 100%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

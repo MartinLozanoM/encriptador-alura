@@ -30,3 +30,20 @@ function desencriptarTexto() {
 
   document.getElementById("mensaje-encriptado").innerHTML = newText;
 }
+
+function copiarTexto() {
+  const textoACopiar = document.getElementById("mensaje-encriptado");
+  const botonCopiar = document.getElementById("boton-copiar");
+
+  navigator.clipboard.writeText(textoACopiar.textContent);
+
+  botonCopiar.style.backgroundColor = "#06C85B";
+  botonCopiar.style.color = "#ffffff";
+  botonCopiar.innerHTML = "Copiado!";
+
+  setTimeout(function () {
+    botonCopiar.style.backgroundColor = "#ffffff";
+    botonCopiar.style.color = "#0a3871";
+    botonCopiar.innerHTML = "Copiar";
+  }, 1000);
+}
