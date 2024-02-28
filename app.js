@@ -54,4 +54,11 @@ function borrarEncriptador() {
   const mensajeEncriptado = document.getElementById("mensaje-encriptado");
   document.getElementById("encriptar-texto").value = "";
   mensajeEncriptado.innerHTML = "";
+  document
+    .getElementById("pantalla-sin-mensaje")
+    .classList.remove("desactivar-elemento");
+
+  document
+    .getElementById("pantalla-con-mensaje")
+    .classList.add("desactivar-elemento");
 }
