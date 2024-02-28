@@ -53,7 +53,10 @@
       <!-- Resultado encriptado -->
       <div class="contenedor-resultado">
         <!-- Aqui se muestra la pantalla cuando no hay mensaje encriptado -->
-        <div class="contenedor-sin-resultado" id="pantalla-sin-mensaje">
+        <div
+          class="contenedor-sin-resultado desactivar-elemento"
+          id="pantalla-sin-mensaje"
+        >
           <img src="./img/Muñeco.png" alt="Muñeco" />
           <div class="ningun-mensaje">
             <h2>Ningún mensaje fue encontrado</h2>
@@ -61,21 +64,23 @@
           </div>
         </div>
         <!-- Aqui se muestra el mensaje encriptado -->
-        <div
-          class="contenedor-con-resultado desactivar-elemento"
-          id="pantalla-con-mensaje"
-        >
+        <div class="contenedor-con-resultado" id="pantalla-con-mensaje">
           <div class="resultado-mensaje">
             <p id="mensaje-encriptado"></p>
           </div>
           <!-- Con este boton copiamos el mensaje del resultado -->
-          <button
-            class="boton-copiar"
-            onclick="copiarTexto()"
-            id="boton-copiar"
-          >
-            Copiar
-          </button>
+          <div class="botones-borrar-copiar">
+            <button
+              class="boton-copiar"
+              onclick="copiarTexto()"
+              id="boton-copiar"
+            >
+              Copiar
+            </button>
+            <button class="boton-borrar" onclick="borrarEncriptador()">
+              Borrar
+            </button>
+          </div>
         </div>
       </div>
     </main>

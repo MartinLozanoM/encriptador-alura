@@ -63,20 +63,32 @@ main {
   border-radius: 24px;
   font-size: 12px;
   padding: 16px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .boton-encriptar {
   margin-bottom: 20px;
   background-color: #0a3871;
   color: #ffffff;
-  cursor: pointer;
+  border: 1px solid #0a3871;
+}
+
+.boton-encriptar:hover {
+  background-color: #356ea9;
+  border-color: #356ea9;
+  font-size: 14px;
 }
 
 .boton-desencriptar {
   border: 1px solid #0a3871;
   color: #0a3871;
   background-color: #ffffff;
-  cursor: pointer;
+}
+
+.boton-desencriptar:hover {
+  background-color: #fafafa;
+  font-size: 14px;
 }
 
 /*? Seccion resultado */
@@ -122,15 +134,32 @@ main {
   color: #495057;
 }
 
-.boton-copiar {
+.botones-borrar-copiar {
+  display: flex;
+  flex-direction: column;
+}
+
+.boton-copiar,
+.boton-borrar {
+  width: 100%;
   border-radius: 24px;
   font-size: 12px;
   padding: 16px;
-  border: 1px solid #0a3871;
-  color: #0a3871;
-  background-color: #ffffff;
-  width: 100%;
+  color: #ffffff;
+  background-color: #052051;
   cursor: pointer;
+  font-weight: 400;
+  border: none;
+}
+
+.boton-copiar:hover,
+.boton-borrar:hover {
+  background-color: #072b61;
+  font-size: 14px;
+}
+
+.boton-copiar {
+  margin-bottom: 3em;
 }
 
 @media screen and (min-width: 768px) {

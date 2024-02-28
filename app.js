@@ -8,15 +8,18 @@ function encriptarTexto() {
     .replaceAll("o", "ober")
     .replaceAll("u", "ufat");
 
-  document
-    .getElementById("pantalla-sin-mensaje")
-    .classList.add("desactivar-elemento");
+  if (textArea.length == 0) {
+  } else {
+    document
+      .getElementById("pantalla-sin-mensaje")
+      .classList.add("desactivar-elemento");
 
-  document
-    .getElementById("pantalla-con-mensaje")
-    .classList.remove("desactivar-elemento");
+    document
+      .getElementById("pantalla-con-mensaje")
+      .classList.remove("desactivar-elemento");
 
-  document.getElementById("mensaje-encriptado").innerHTML = newText;
+    document.getElementById("mensaje-encriptado").innerHTML = newText;
+  }
 }
 
 function desencriptarTexto() {
@@ -42,8 +45,13 @@ function copiarTexto() {
   botonCopiar.innerHTML = "Copiado!";
 
   setTimeout(function () {
-    botonCopiar.style.backgroundColor = "#ffffff";
-    botonCopiar.style.color = "#0a3871";
+    botonCopiar.style.backgroundColor = "#052051";
     botonCopiar.innerHTML = "Copiar";
   }, 1000);
+}
+
+function borrarEncriptador() {
+  const mensajeEncriptado = document.getElementById("mensaje-encriptado");
+  document.getElementById("encriptar-texto").value = "";
+  mensajeEncriptado.innerHTML = "";
 }
