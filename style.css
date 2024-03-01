@@ -38,6 +38,12 @@ main {
   font-size: 20px;
 }
 
+.mensaje-advertencia {
+  text-align: start;
+  background-color: #e05360;
+  color: #ffffff;
+}
+
 .advertencia {
   display: flex;
 }
